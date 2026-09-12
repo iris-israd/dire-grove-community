@@ -1,3 +1,3 @@
-![CE Logo](DGCE V2.png)
+![CE Logo](DGCE_fv.png)
 
 Dire Grove: Community Edition.
