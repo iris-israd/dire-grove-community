@@ -1,2 +1,2 @@
-# dire-grove-community
+[DGCE V2.png]
  Dire Grove: Community Edition.
