@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://rcg2pdqm2uvy"]
+
+[ext_resource type="Script" uid="uid://ctk8jk2j8jpy4" path="res://Scenes/Hotel Exterior/ht_exterior.gd" id="1_bfobf"]
+[ext_resource type="Texture2D" uid="uid://dkiafw88kt3jm" path="res://Scenes/Hotel Exterior/Assets/Exterior.jpg" id="2_whn2w"]
+[ext_resource type="Texture2D" uid="uid://br45d45l55h0g" path="res://BaseUI/40.png" id="3_yedt7"]
+
+[node name="HtExterior" type="Node2D" unique_id=1132148624]
+script = ExtResource("1_bfobf")
+
+[node name="28" type="Sprite2D" parent="." unique_id=178594669]
+position = Vector2(576, 264)
+texture = ExtResource("2_whn2w")
+
+[node name="GoHotel" type="ColorRect" parent="." unique_id=1022834986]
+offset_left = 416.0
+offset_top = 176.0
+offset_right = 592.0
+offset_bottom = 424.0
+color = Color(1, 1, 1, 0)
+
+[node name="40" type="Sprite2D" parent="." unique_id=161837922]
+visible = false
+position = Vector2(504, 336)
+texture = ExtResource("3_yedt7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1885454416]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1643198152]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="gui_input" from="GoHotel" to="." method="_on_go_hotel_gui_input"]
+[connection signal="mouse_entered" from="GoHotel" to="." method="_on_go_hotel_mouse_entered"]
+[connection signal="mouse_exited" from="GoHotel" to="." method="_on_go_hotel_mouse_exited"]

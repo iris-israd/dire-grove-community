@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://b0bxueg01m41p"]
+
+[ext_resource type="Script" uid="uid://4cr0h25i6ij0" path="res://Scripts/mainmenu.gd" id="1_knowq"]
+[ext_resource type="Texture2D" uid="uid://becn4bweue6kv" path="res://Logos/DGCE V2.png" id="2_s6bgx"]
+
+[node name="Control" type="Control" unique_id=927418056]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_knowq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1701937403]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DgceV2" type="Sprite2D" parent="." unique_id=1174114226]
+position = Vector2(572.0625, 195.0625)
+scale = Vector2(1.165, 1.165)
+texture = ExtResource("2_s6bgx")
+
+[node name="PLAY" type="Button" parent="." unique_id=730017102]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.44400004
+anchor_right = 0.5
+anchor_bottom = 0.44400004
+offset_left = -195.93756
+offset_top = 11.350464
+offset_right = 188.06244
+offset_bottom = 75.350464
+text = "PLAY"
+
+[node name="SETTINGS" type="Button" parent="." unique_id=1456464823]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.568
+anchor_right = 0.5
+anchor_bottom = 0.568
+offset_left = -195.93756
+offset_top = 10.998474
+offset_right = 188.06244
+offset_bottom = 74.998474
+text = "SETTINGS"
+
+[node name="EXIT" type="Button" parent="." unique_id=893109495]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.69100004
+anchor_right = 0.5
+anchor_bottom = 0.69100004
+offset_left = -195.93756
+offset_top = 11.294464
+offset_right = 188.06244
+offset_bottom = 75.294464
+text = "QUIT"
+
+[node name="Version" type="Label" parent="." unique_id=237223088]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 600.0
+offset_right = 930.0
+offset_bottom = 623.0
+text = "Alpha 0.1.10. All Rights Reserved to Big Fish Games, BFG Entertainment and Raven Studios."
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=150298063]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=258107543]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]

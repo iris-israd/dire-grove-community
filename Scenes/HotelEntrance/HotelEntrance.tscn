@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ca48wnw5fb3et"]
+
+[ext_resource type="Script" uid="uid://boey1rydwavd8" path="res://Scenes/HotelEntrance/hotel_entrance.gd" id="1_btp3v"]
+[ext_resource type="Texture2D" uid="uid://b37wyo8letsnd" path="res://Scenes/HotelEntrance/Assets/68.jpg" id="1_mf4lg"]
+[ext_resource type="Texture2D" uid="uid://br45d45l55h0g" path="res://BaseUI/40.png" id="2_btp3v"]
+[ext_resource type="Texture2D" uid="uid://56wq8ivfbhsm" path="res://BaseUI/27.png" id="4_b7ue4"]
+
+[node name="HotelEntrance" type="Node2D" unique_id=2008484737]
+script = ExtResource("1_btp3v")
+
+[node name="68" type="Sprite2D" parent="." unique_id=1014079255]
+position = Vector2(584, 264)
+texture = ExtResource("1_mf4lg")
+
+[node name="GoHotel" type="ColorRect" parent="." unique_id=512638678]
+offset_left = 504.0
+offset_top = 184.0
+offset_right = 680.0
+offset_bottom = 424.0
+color = Color(1, 1, 1, 0)
+
+[node name="40" type="Sprite2D" parent="." unique_id=665828495]
+visible = false
+position = Vector2(584, 312)
+texture = ExtResource("2_btp3v")
+
+[node name="GoBack" type="ColorRect" parent="." unique_id=907971282]
+offset_left = 72.0
+offset_top = 544.0
+offset_right = 1096.0
+offset_bottom = 648.0
+color = Color(1, 1, 1, 0)
+
+[node name="27" type="Sprite2D" parent="." unique_id=1719893749]
+visible = false
+position = Vector2(576, 592)
+texture = ExtResource("4_b7ue4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=713999666]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1694042591]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="gui_input" from="GoHotel" to="." method="_on_go_hotel_gui_input"]
+[connection signal="mouse_entered" from="GoHotel" to="." method="_on_go_hotel_mouse_entered"]
+[connection signal="mouse_exited" from="GoHotel" to="." method="_on_go_hotel_mouse_exited"]
+[connection signal="gui_input" from="GoBack" to="." method="_on_go_back_gui_input"]
+[connection signal="mouse_entered" from="GoBack" to="." method="_on_go_back_mouse_entered"]
+[connection signal="mouse_exited" from="GoBack" to="." method="_on_go_back_mouse_exited"]

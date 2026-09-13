@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://5dscpko4egsd"]
+
+[ext_resource type="Script" uid="uid://c605bu3hkc58p" path="res://Scenes/HotelFrontDesk/front_desk.gd" id="1_v8eiy"]
+[ext_resource type="Texture2D" uid="uid://ce0ao6pkh2k32" path="res://Scenes/HotelFrontDesk/101.jpg" id="2_xxt7r"]
+[ext_resource type="Texture2D" uid="uid://56wq8ivfbhsm" path="res://BaseUI/27.png" id="3_bkfpb"]
+[ext_resource type="Texture2D" uid="uid://ceusc7fv57vv6" path="res://BaseUI/5.jpg" id="4_xxt7r"]
+
+[node name="FrontDesk" type="Node2D" unique_id=1495894998]
+script = ExtResource("1_v8eiy")
+
+[node name="101" type="Sprite2D" parent="." unique_id=1035570283]
+position = Vector2(576, 264)
+texture = ExtResource("2_xxt7r")
+
+[node name="GoBack" type="ColorRect" parent="." unique_id=2041996899]
+offset_left = 64.0
+offset_top = 544.0
+offset_right = 1088.0
+offset_bottom = 648.0
+color = Color(1, 1, 1, 0)
+
+[node name="27" type="Sprite2D" parent="." unique_id=197683947]
+visible = false
+position = Vector2(576, 592)
+texture = ExtResource("3_bkfpb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=292046477]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2009624647]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=918254973]
+offset_left = 560.0
+offset_top = 160.0
+offset_right = 1376.0
+offset_bottom = 608.0
+scale = Vector2(0.31895205, 0.28195554)
+texture_normal = ExtResource("4_xxt7r")
+texture_pressed = ExtResource("4_xxt7r")
+texture_hover = ExtResource("4_xxt7r")
+
+[connection signal="gui_input" from="GoBack" to="." method="_on_go_back_gui_input"]
+[connection signal="mouse_entered" from="GoBack" to="." method="_on_go_back_mouse_entered"]
+[connection signal="mouse_exited" from="GoBack" to="." method="_on_go_back_mouse_exited"]
+[connection signal="gui_input" from="TextureButton" to="." method="_on_texture_button_gui_input"]

@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://bdvxnxae0e147"]
+
+[ext_resource type="Script" uid="uid://b8m6p7qrvtou7" path="res://Scripts/hoscene.gd" id="1_mry12"]
+[ext_resource type="Texture2D" uid="uid://dirp1f84ut7g4" path="res://Scenes/Bedroom/BG.png" id="2_ixwn5"]
+[ext_resource type="Texture2D" uid="uid://4ql10vy3tlp3" path="res://Scenes/Bedroom/Objects/Fan.png" id="3_qkhiw"]
+[ext_resource type="Script" uid="uid://dm7rdke56krnv" path="res://Scripts/fan.gd" id="4_ixwn5"]
+[ext_resource type="Texture2D" uid="uid://c50t1h3vuwxvf" path="res://Scenes/Bedroom/Objects/Vacuum.png" id="5_gq4lr"]
+[ext_resource type="Script" uid="uid://bxliob3o1d2x7" path="res://Scripts/vac.gd" id="6_mry12"]
+[ext_resource type="Texture2D" uid="uid://bixfmo66gj4gm" path="res://Scenes/Bedroom/FG.png" id="7_1bm6n"]
+[ext_resource type="Texture2D" uid="uid://qnss2kfptu80" path="res://icon.svg" id="8_3n4ux"]
+
+[node name="HiddenObjectsContainer" type="Node2D" unique_id=842841183]
+script = ExtResource("1_mry12")
+
+[node name="281" type="Sprite2D" parent="." unique_id=1682288489]
+position = Vector2(576, 320)
+scale = Vector2(0.875, 0.8541666)
+texture = ExtResource("2_ixwn5")
+
+[node name="Fan" type="TextureButton" parent="." unique_id=45800259]
+offset_left = 752.0
+offset_top = 96.0
+offset_right = 880.0
+offset_bottom = 282.0
+texture_normal = ExtResource("3_qkhiw")
+texture_pressed = ExtResource("3_qkhiw")
+texture_hover = ExtResource("3_qkhiw")
+script = ExtResource("4_ixwn5")
+
+[node name="Vac" type="TextureButton" parent="." unique_id=1363064764]
+offset_left = 296.0
+offset_top = 240.0
+offset_right = 424.0
+offset_bottom = 474.0
+texture_normal = ExtResource("5_gq4lr")
+texture_pressed = ExtResource("5_gq4lr")
+texture_hover = ExtResource("5_gq4lr")
+script = ExtResource("6_mry12")
+
+[node name="282" type="Sprite2D" parent="." unique_id=1714584424]
+position = Vector2(576, 320)
+scale = Vector2(0.875, 0.8541666)
+texture = ExtResource("7_1bm6n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1672617292]
+offset_left = 128.0
+offset_top = 448.0
+offset_right = 1024.0
+offset_bottom = 648.0
+color = Color(0.14767182, 0.14767179, 0.14767179, 0.34901962)
+
+[node name="HogHUD" type="CanvasLayer" parent="." unique_id=1920021138]
+
+[node name="GridContainer" type="GridContainer" parent="HogHUD" unique_id=1532746627]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.846
+anchor_right = 0.5
+anchor_bottom = 0.846
+offset_left = -424.0
+offset_top = -76.20801
+offset_right = 424.0
+offset_bottom = 75.79199
+columns = 7
+
+[node name="ObjectPrompt" type="ColorRect" parent="." unique_id=279736870]
+visible = false
+offset_left = 344.0
+offset_top = 104.0
+offset_right = 816.0
+offset_bottom = 408.0
+color = Color(0.09803922, 0.09803922, 0.09803922, 0.76862746)
+
+[node name="Label" type="Label" parent="ObjectPrompt" unique_id=488169659]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.115
+anchor_right = 0.5
+anchor_bottom = 0.115
+offset_left = -132.0
+offset_top = -11.440001
+offset_right = 132.0
+offset_bottom = 11.559999
+text = "Congratulations, you've found:"
+horizontal_alignment = 1
+
+[node name="ObjName" type="Label" parent="ObjectPrompt" unique_id=1747838096]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.82600003
+anchor_right = 0.5
+anchor_bottom = 0.82600003
+offset_left = -132.0
+offset_top = -11.456009
+offset_right = 132.0
+offset_bottom = 11.543991
+text = "OBJECT"
+horizontal_alignment = 1
+
+[node name="ObjIm" type="Sprite2D" parent="ObjectPrompt" unique_id=1276690865]
+position = Vector2(232, 152)
+texture = ExtResource("8_3n4ux")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=740569291]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=899817563]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
