@@ -39,6 +39,7 @@ texture = ExtResource("4_b7ue4")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=713999666]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1694042591]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var item_list_container = $HogHUD/GridContainer # Container = node2d
+@onready var item_list_container = $ColorRect/GridContainer # Container = node2d
 @onready var obj_r = $ObjectPrompt/ObjName
 @onready var obj_i = $ObjectPrompt/ObjIm
 var required_items: Array[String] = ["Fan", "Vacuum"] # Have to change it for each instance

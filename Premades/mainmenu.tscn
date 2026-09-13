@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4cr0h25i6ij0" path="res://Scripts/mainmenu.gd" id="1_knowq"]
 [ext_resource type="Texture2D" uid="uid://becn4bweue6kv" path="res://Logos/DGCE V2.png" id="2_s6bgx"]
+[ext_resource type="Texture2D" uid="uid://cybn0yvbsfnh8" path="res://Logos/rt.png" id="3_s6bgx"]
 
 [node name="Control" type="Control" unique_id=927418056]
 layout_mode = 3
@@ -29,14 +30,14 @@ texture = ExtResource("2_s6bgx")
 [node name="PLAY" type="Button" parent="." unique_id=730017102]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.44400004
-anchor_right = 0.5
-anchor_bottom = 0.44400004
-offset_left = -195.93756
-offset_top = 11.350464
-offset_right = 188.06244
-offset_bottom = 75.350464
+anchor_left = 0.497
+anchor_top = 0.51500005
+anchor_right = 0.497
+anchor_bottom = 0.51500005
+offset_left = -192.48157
+offset_top = -29.720032
+offset_right = 191.51843
+offset_bottom = 29.342468
 text = "PLAY"
 
 [node name="SETTINGS" type="Button" parent="." unique_id=1456464823]
@@ -77,6 +78,7 @@ horizontal_alignment = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=150298063]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=258107543]
+visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -91,6 +93,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Rt" type="Sprite2D" parent="." unique_id=1539834664]
+position = Vector2(104, 608)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_s6bgx")
 
 [connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
