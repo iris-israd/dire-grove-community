@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cr6h5c433wrv6"]
+
+[ext_resource type="Script" uid="uid://ch1r41br1n1sh" path="res://BaseUI/diary_screen.gd" id="1_lfst7"]
+
+[node name="DiaryScreen" type="Node2D" unique_id=1128791506]
+script = ExtResource("1_lfst7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=17774448]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="." unique_id=478975509]
+offset_left = 256.0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "MD'S Diary"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1044933072]
+offset_left = 1056.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 72.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

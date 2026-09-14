@@ -64,8 +64,6 @@ theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 100
 columns = 7
 
-[node name="HogHUD" type="CanvasLayer" parent="." unique_id=1920021138]
-
 [node name="ObjectPrompt" type="ColorRect" parent="." unique_id=279736870]
 visible = false
 offset_left = 344.0
@@ -109,6 +107,7 @@ texture = ExtResource("8_3n4ux")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=740569291]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=899817563]
+visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5

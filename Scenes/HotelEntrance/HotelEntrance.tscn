@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b37wyo8letsnd" path="res://Scenes/HotelEntrance/Assets/68.jpg" id="1_mf4lg"]
 [ext_resource type="Texture2D" uid="uid://br45d45l55h0g" path="res://BaseUI/40.png" id="2_btp3v"]
 [ext_resource type="Texture2D" uid="uid://56wq8ivfbhsm" path="res://BaseUI/27.png" id="4_b7ue4"]
+[ext_resource type="PackedScene" uid="uid://djpxddefufry5" path="res://BaseUI/PlayerInterface.tscn" id="5_ipfsb"]
 
 [node name="HotelEntrance" type="Node2D" unique_id=2008484737]
 script = ExtResource("1_btp3v")
@@ -53,6 +54,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="PlayerInterface" parent="." unique_id=2072280522 instance=ExtResource("5_ipfsb")]
 
 [connection signal="gui_input" from="GoHotel" to="." method="_on_go_hotel_gui_input"]
 [connection signal="mouse_entered" from="GoHotel" to="." method="_on_go_hotel_mouse_entered"]

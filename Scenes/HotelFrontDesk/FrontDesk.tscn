@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://56wq8ivfbhsm" path="res://BaseUI/27.png" id="3_bkfpb"]
 [ext_resource type="Texture2D" uid="uid://ceusc7fv57vv6" path="res://BaseUI/5.jpg" id="4_xxt7r"]
 [ext_resource type="Texture2D" uid="uid://ckfaqud8yclc0" path="res://BaseUI/11.png" id="5_bkfpb"]
+[ext_resource type="PackedScene" uid="uid://djpxddefufry5" path="res://BaseUI/PlayerInterface.tscn" id="6_0m7fg"]
 
 [node name="FrontDesk" type="Node2D" unique_id=1495894998]
 script = ExtResource("1_v8eiy")
@@ -67,6 +68,8 @@ emission_rect_extents = Vector2(140, 85)
 gravity = Vector2(0, 500)
 scale_amount_min = 0.2
 scale_amount_max = 0.2
+
+[node name="PlayerInterface" parent="." unique_id=2072280522 instance=ExtResource("6_0m7fg")]
 
 [connection signal="gui_input" from="GoBack" to="." method="_on_go_back_gui_input"]
 [connection signal="mouse_entered" from="GoBack" to="." method="_on_go_back_mouse_entered"]

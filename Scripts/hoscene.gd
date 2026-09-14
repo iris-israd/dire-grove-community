@@ -3,6 +3,7 @@ extends Node2D
 @onready var item_list_container = $ColorRect/GridContainer # Container = node2d
 @onready var obj_r = $ObjectPrompt/ObjName
 @onready var obj_i = $ObjectPrompt/ObjIm
+signal finished(state: bool)
 var required_items: Array[String] = ["Fan", "Vacuum"] # Have to change it for each instance
 var final_item: String = "Fan"
 
@@ -39,8 +40,6 @@ func _check_victory_condition():
 		obj_r.text = final_item
 		obj_i.texture = load("res://Scenes/Bedroom/Objects/Fan.png")
 		await get_tree().create_timer(5.0).timeout
-		var tween = create_tween()
-		await tween.finished
-		tween.tween_property($CanvasLayer/ColorRect, "modulate:a", 1.0, 0.5)
-		get_tree().quit()
+		finished.emit(true)
+		get_tree().change_scene_to_file("res://Scenes/HotelFrontDesk/FrontDesk.tscn")
 		# Trigger transition back to main map or hand over inventory evidence

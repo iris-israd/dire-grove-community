@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://djpxddefufry5"]
+
+[ext_resource type="Script" uid="uid://bradfh8nis7jh" path="res://BaseUI/player_interface.gd" id="1_llgv7"]
+
+[node name="PlayerInterface" type="Node2D" unique_id=2072280522]
+script = ExtResource("1_llgv7")
+
+[node name="Button" type="Button" parent="." unique_id=273670161]
+offset_left = 16.0
+offset_top = 496.0
+offset_right = 112.0
+offset_bottom = 632.0
+text = "Diary!"
+
+[node name="Inventory" type="ColorRect" parent="." unique_id=202676313]
+offset_left = 152.0
+offset_top = 536.0
+offset_right = 1000.0
+offset_bottom = 632.0
+color = Color(0.14509805, 0.14509805, 0.14509805, 0.3019608)
+
+[node name="Label" type="Label" parent="Inventory" unique_id=1567965184]
+layout_mode = 0
+offset_left = 312.0
+offset_top = -40.0
+offset_right = 536.0
+offset_bottom = -17.0
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1041086350]
+offset_left = 1040.0
+offset_top = 496.0
+offset_right = 1136.0
+offset_bottom = 632.0
+text = "Crime
+'Puter"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

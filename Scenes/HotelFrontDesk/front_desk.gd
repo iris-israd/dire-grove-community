@@ -1,11 +1,21 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var tween = create_tween()
 	tween.tween_property($CanvasLayer/ColorRect, "modulate:a", 0.0, 0.5)
+	
+	# Connect to the global Event Bus instead of trying to look for a non-existent node
+	EventBus.hop_finished.connect(_on_hop1_finished)
 
+func _on_hop1_finished(state: bool) -> void:
+	print("DEBUG: Hidden Object Scene Finished! State: ", state)
+	# Disconnect after it runs once so it doesn't duplicate stack connections
+	EventBus.hop_finished.disconnect(_on_hop1_finished) 
+	
+	if state == true:
+		$TextureButton.visible = false
+		$CPUParticles2D.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

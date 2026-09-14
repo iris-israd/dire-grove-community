@@ -5,7 +5,7 @@ extends Control
 var vnumb: String = "Alpha 0.1.25"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	version.text = vnumb + ". All Rights Reserved to Big Fish Games, BFG Entertainment and Raven Studios."
+	version.text = vnumb + ". All Rights Reserved to Big Fish Games, BFG Entertainment and Raven Team."
 	pass # Replace with function body.
 
 
