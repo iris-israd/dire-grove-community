@@ -2,7 +2,7 @@ extends Control
 
 @onready var version = $Version
 @onready var fade: ColorRect = $CanvasLayer/ColorRect
-var vnumb: String = "Alpha 0.1.25"
+var vnumb: String = "Alpha 0.1.55"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	version.text = vnumb + ". All Rights Reserved to Big Fish Games, BFG Entertainment and Raven Team."
