@@ -23,6 +23,19 @@ func _ready():
 			child.object_found.connect(_on_item_collected)
 
 func _on_item_collected(collected_name: String):
+	var sound_to: int = randi_range(1,3)
+	if sound_to == 1:
+		$AudioStreamPlayer.stream = load("res://Sounds/findItem1.mp3")
+		$AudioStreamPlayer.play()
+	elif sound_to == 2:
+		$AudioStreamPlayer.stream = load("res://Sounds/findItem2.mp3")
+		$AudioStreamPlayer.play()
+	elif sound_to == 3:
+		$AudioStreamPlayer.stream = load("res://Sounds/findItem3.mp3")
+		$AudioStreamPlayer.play()
+	else:
+		print("This is impossible.")
+	
 	if collected_name in required_items:
 		required_items.erase(collected_name)
 		
@@ -30,6 +43,7 @@ func _on_item_collected(collected_name: String):
 		var hud_label = item_list_container.get_node(collected_name)
 		if hud_label:
 			hud_label.modulate = Color(0.5, 0.5, 0.5, 0.5) # Dim out text
+			
 			
 		_check_victory_condition()
 

@@ -44,6 +44,35 @@ color = Color(0, 0, 0, 1)
 
 [node name="PlayerInterface" parent="." unique_id=2072280522 instance=ExtResource("4_whn2w")]
 
+[node name="Quotes" type="ColorRect" parent="." unique_id=1965274264]
+modulate = Color(1, 1, 1, 0)
+offset_left = 97.0
+offset_top = 19.0
+offset_right = 1053.0
+offset_bottom = 65.0
+color = Color(0, 0, 0, 0.80784315)
+
+[node name="Label" type="Label" parent="Quotes" unique_id=1581386259]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.522
+anchor_right = 0.492
+anchor_bottom = 0.522
+offset_left = -449.35202
+offset_top = -20.012001
+offset_right = 448.64798
+offset_bottom = 19.987999
+horizontal_alignment = 1
+
+[node name="Fountain" type="ColorRect" parent="." unique_id=1939244933]
+offset_left = 85.0
+offset_top = 261.0
+offset_right = 276.0
+offset_bottom = 470.0
+color = Color(1, 1, 1, 0)
+
 [connection signal="gui_input" from="GoHotel" to="." method="_on_go_hotel_gui_input"]
 [connection signal="mouse_entered" from="GoHotel" to="." method="_on_go_hotel_mouse_entered"]
 [connection signal="mouse_exited" from="GoHotel" to="." method="_on_go_hotel_mouse_exited"]
+[connection signal="gui_input" from="Fountain" to="." method="_on_fountain_gui_input"]
