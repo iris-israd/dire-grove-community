@@ -90,6 +90,16 @@ offset_right = 835.0
 offset_bottom = -3.0
 color = Color(1, 1, 1, 0)
 
+[node name="GridContainer" type="GridContainer" parent="Inventory" unique_id=607682382]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 1.0
+offset_right = 831.0
+offset_bottom = 92.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 0
+columns = 10
+
 [node name="Button2" type="Button" parent="." unique_id=1041086350]
 offset_left = 1040.0
 offset_top = 496.0
