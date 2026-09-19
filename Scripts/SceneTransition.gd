@@ -3,7 +3,6 @@ extends CanvasLayer
 signal on_transition_finished
 
 @onready var color_rect: ColorRect = $ColorRect
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	color_rect.visible = false 
