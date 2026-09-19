@@ -37,24 +37,6 @@ visible = false
 position = Vector2(576, 592)
 texture = ExtResource("4_b7ue4")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=713999666]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1694042591]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
 [node name="PlayerInterface" parent="." unique_id=2072280522 instance=ExtResource("5_ipfsb")]
 
 [connection signal="gui_input" from="GoHotel" to="." method="_on_go_hotel_gui_input"]

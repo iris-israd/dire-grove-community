@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SceneManager="*uid://dkivl78sawj40"
 EventBus="*uid://ou3oyvu1puam"
 Global="*uid://n8adevqr4sd5"
+SceneTransition="*uid://k2t8jf5g8tm1"
 
 [display]
 

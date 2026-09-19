@@ -24,24 +24,6 @@ visible = false
 position = Vector2(504, 336)
 texture = ExtResource("3_yedt7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1885454416]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1643198152]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
 [node name="PlayerInterface" parent="." unique_id=2072280522 instance=ExtResource("4_whn2w")]
 
 [node name="Quotes" type="ColorRect" parent="." unique_id=1965274264]

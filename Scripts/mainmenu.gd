@@ -16,10 +16,8 @@ func _process(delta: float) -> void:
 
 func _on_play_pressed() -> void:
 	$PLAY.disabled = true
-	var tween = create_tween()
-	tween.tween_property(fade, "modulate:a", 1.0, 0.5)
-	
-	await tween.finished
+	SceneTransition.transition_black()
+	await SceneTransition.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/Hotel Exterior/HtExterior.tscn")
 
 
