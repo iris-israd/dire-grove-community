@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dkb0uurx6thcu"]
+
+[ext_resource type="Script" uid="uid://ko4u0k1sw4w8" path="res://scripts/audiomanager.gd" id="1_xohrd"]
+[ext_resource type="AudioStream" uid="uid://cxnonbp0oemos" path="res://Sounds/BGM/silence.ogg" id="2_dwyuc"]
+[ext_resource type="AudioStream" uid="uid://bsuu65q36uxgr" path="res://Sounds/SFX/findItem1.mp3" id="3_yqbes"]
+[ext_resource type="AudioStream" uid="uid://dwsnk1e0jr76h" path="res://Sounds/SFX/findItem2.mp3" id="4_1ny0v"]
+[ext_resource type="AudioStream" uid="uid://bj48j476dnnn4" path="res://Sounds/SFX/findItem3.mp3" id="5_tk2n2"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_hy716"]
+clip_count = 1
+clip_0/name = &"Silence"
+clip_0/stream = ExtResource("2_dwyuc")
+clip_0/auto_advance = 0
+
+[node name="AudioManager" type="Node" unique_id=1077923851]
+script = ExtResource("1_xohrd")
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=244500736]
+stream = SubResource("AudioStreamInteractive_hy716")
+autoplay = true
+
+[node name="SFX" type="Node" parent="." unique_id=2025318433]
+
+[node name="findItem1" type="AudioStreamPlayer" parent="SFX" unique_id=392482832]
+stream = ExtResource("3_yqbes")
+
+[node name="findItem2" type="AudioStreamPlayer" parent="SFX" unique_id=831632538]
+stream = ExtResource("4_1ny0v")
+
+[node name="findItem3" type="AudioStreamPlayer" parent="SFX" unique_id=1790563093]
+stream = ExtResource("5_tk2n2")
+
+[node name="AMB" type="Node" parent="." unique_id=1233346162]

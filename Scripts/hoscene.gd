@@ -25,14 +25,11 @@ func _ready():
 func _on_item_collected(collected_name: String):
 	var sound_to: int = randi_range(1,3)
 	if sound_to == 1:
-		$AudioStreamPlayer.stream = load("res://Sounds/findItem1.mp3")
-		$AudioStreamPlayer.play()
+		AudioManager.play_sound("findItem1")
 	elif sound_to == 2:
-		$AudioStreamPlayer.stream = load("res://Sounds/findItem2.mp3")
-		$AudioStreamPlayer.play()
+		AudioManager.play_sound("findItem2")
 	elif sound_to == 3:
-		$AudioStreamPlayer.stream = load("res://Sounds/findItem3.mp3")
-		$AudioStreamPlayer.play()
+		AudioManager.play_sound("findItem3")
 	else:
 		print("This is impossible.")
 	
@@ -52,8 +49,8 @@ func _check_victory_condition():
 		print("Scene Cleaned! Rewarding player with key item.")
 		$ObjectPrompt.visible = true
 		obj_r.text = final_item
-		obj_i.texture = load("res://Scenes/Bedroom/Objects/Fan.png")
+		obj_i.texture = load("res://Scenes/BedroomHiddenObject/Objects/Fan.png")
 		await get_tree().create_timer(5.0).timeout
 		finished.emit(true)
-		get_tree().change_scene_to_file("res://Scenes/HotelFrontDesk/FrontDesk.tscn")
+		get_tree().change_scene_to_file("res://Scenes/HotelFrontDesk/HotelFrontDesk.tscn")
 		# Trigger transition back to main map or hand over inventory evidence

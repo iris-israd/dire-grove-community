@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_go_hotel_mouse_entered() -> void:
@@ -19,7 +19,7 @@ func _on_go_hotel_mouse_exited() -> void:
 func _on_go_hotel_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			SceneTransition.transition_fade("res://Scenes/HotelFrontDesk/FrontDesk.tscn")
+			SceneTransition.transition_fade("res://Scenes/HotelFrontDesk/HotelFrontDesk.tscn")
 			await SceneTransition.on_transition_finished
 			queue_free()
 
@@ -27,7 +27,7 @@ func _on_go_hotel_gui_input(event: InputEvent) -> void:
 func _on_go_back_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			SceneTransition.transition_fade("res://Scenes/Hotel Exterior/HtExterior.tscn")
+			SceneTransition.transition_fade("res://Scenes/HotelExterior/HotelExterior.tscn")
 			await SceneTransition.on_transition_finished
 			queue_free()
 
