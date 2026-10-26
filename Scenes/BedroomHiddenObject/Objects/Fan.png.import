@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce0ao6pkh2k32"
-path="res://.godot/imported/101.jpg-e96603e1684a312590d850a71e8a6d83.ctex"
+uid="uid://4ql10vy3tlp3"
+path="res://.godot/imported/Fan.png-d165e2b370d88e0ce87dc2a80c76a97f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/HotelFrontDesk/101.jpg"
-dest_files=["res://.godot/imported/101.jpg-e96603e1684a312590d850a71e8a6d83.ctex"]
+source_file="res://Scenes/BedroomHiddenObject/Objects/Fan.png"
+dest_files=["res://.godot/imported/Fan.png-d165e2b370d88e0ce87dc2a80c76a97f.ctex"]
 
 [params]
 

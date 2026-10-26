@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c50t1h3vuwxvf"
-path="res://.godot/imported/Vacuum.png-e8aece6545e8caea0e09e7f0515c470e.ctex"
+uid="uid://dirp1f84ut7g4"
+path="res://.godot/imported/BG.png-c5c2ef1d546f02d9c16ee121fa7d6983.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Bedroom/Objects/Vacuum.png"
-dest_files=["res://.godot/imported/Vacuum.png-e8aece6545e8caea0e09e7f0515c470e.ctex"]
+source_file="res://Scenes/BedroomHiddenObject/BG.png"
+dest_files=["res://.godot/imported/BG.png-c5c2ef1d546f02d9c16ee121fa7d6983.ctex"]
 
 [params]
 

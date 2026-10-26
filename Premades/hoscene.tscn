@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bdvxnxae0e147"]
 
 [ext_resource type="Script" uid="uid://b8m6p7qrvtou7" path="res://Scripts/hoscene.gd" id="1_mry12"]
-[ext_resource type="Texture2D" uid="uid://dirp1f84ut7g4" path="res://Scenes/Bedroom/BG.png" id="2_ixwn5"]
-[ext_resource type="Texture2D" uid="uid://4ql10vy3tlp3" path="res://Scenes/Bedroom/Objects/Fan.png" id="3_qkhiw"]
+[ext_resource type="Texture2D" uid="uid://dirp1f84ut7g4" path="res://Scenes/BedroomHiddenObject/BG.png" id="2_ixwn5"]
+[ext_resource type="Texture2D" uid="uid://4ql10vy3tlp3" path="res://Scenes/BedroomHiddenObject/Objects/Fan.png" id="3_qkhiw"]
 [ext_resource type="Script" uid="uid://dm7rdke56krnv" path="res://Scripts/fan.gd" id="4_ixwn5"]
-[ext_resource type="Texture2D" uid="uid://c50t1h3vuwxvf" path="res://Scenes/Bedroom/Objects/Vacuum.png" id="5_gq4lr"]
+[ext_resource type="Texture2D" uid="uid://c50t1h3vuwxvf" path="res://Scenes/BedroomHiddenObject/Objects/Vacuum.png" id="5_gq4lr"]
 [ext_resource type="Script" uid="uid://bxliob3o1d2x7" path="res://Scripts/vac.gd" id="6_mry12"]
-[ext_resource type="Texture2D" uid="uid://bixfmo66gj4gm" path="res://Scenes/Bedroom/FG.png" id="7_1bm6n"]
+[ext_resource type="Texture2D" uid="uid://bixfmo66gj4gm" path="res://Scenes/BedroomHiddenObject/FG.png" id="7_1bm6n"]
 [ext_resource type="Texture2D" uid="uid://qnss2kfptu80" path="res://icon.svg" id="8_3n4ux"]
 
 [node name="HiddenObjectsContainer" type="Node2D" unique_id=842841183]
@@ -122,5 +122,3 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1507921109]
